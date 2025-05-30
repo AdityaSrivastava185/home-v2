@@ -68,8 +68,8 @@ const Features = () => {
             title="Interactive prototyping"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quia voluptatum placeat praesentium corporis quo ea explicabo deserunt ratione nobis."
           >
-            <div className="aspect-video">
-              <p className="text-4xl font-extrabold text-white/20 text-cneter flex flex-col gap-4 items-center justify-center">
+            <div className="aspect-video flex flex-col gap-4 items-center justify-center">
+              <p className="text-4xl font-extrabold text-white/20 text-cneter ">
                 We help to achieve{" "}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text ">
                   growth{" "}
