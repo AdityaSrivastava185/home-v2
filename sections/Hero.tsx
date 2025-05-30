@@ -30,7 +30,7 @@ const Hero = () => {
   ]);
   return (
     <section
-      className="pt-20 pb-24 px-4 md:px-8 lg:px-12 overflow-x-clip"
+      className="pt-20 pb-24 px-4 md:px-8 lg:px-12 overflow-x-clip bg-gradient-to-tl from-[#100a2e] to-[#000000] bg-opacity-95 md:bg-none md:min-h-screen [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
       style={{ cursor: `url(${cursorYou.src}), auto` }}
     >
       <div className="relative max-w-screen-xl mx-auto">

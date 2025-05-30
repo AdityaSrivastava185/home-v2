@@ -1,7 +1,7 @@
 "use client";
 
-import { Product, products } from "@/data/productData";
-import ProductCard from "@/components/productCard";
+import Image from "next/image";
+import { products } from "@/data/productData";
 
 interface Props {
   params: { id: string };
@@ -15,140 +15,121 @@ export default function ProductDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="bg-black min-h-screen w-full flex flex-col md:flex-row items-center justify-center">
-      <section className="py-8  md:py-16 dark:bg-gray-900 antialiased rounded-2xl">
-        <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-16">
-            <div className="shrink-0 max-w-md lg:max-w-lg mx-auto">
-              <img
-                className="w-full dark:hidden"
-                src={product.imageSrc}
-                alt=""
-              />
-            </div>
-
-            <div className="mt-6 sm:mt-8 lg:mt-0">
-              <h1 className="text-xl font-semibold text-white sm:text-2xl dark:text-white">
-                {product.name}
-              </h1>
-              <div className="mt-4 sm:items-center sm:gap-4 sm:flex">
-                <p className="text-2xl font-extrabold text-white sm:text-3xl dark:text-white">
-                  {product.price}
-                </p>
-
-                <div className="flex items-center gap-2 mt-2 sm:mt-0">
-                  <div className="flex items-center gap-1">
-                    <svg
-                      className="w-4 h-4 text-yellow-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 text-yellow-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 text-yellow-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 text-yellow-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                    </svg>
-                    <svg
-                      className="w-4 h-4 text-yellow-300"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm font-medium leading-none text-gray-500 dark:text-gray-400">
-                    (5.0)
-                  </p>
-                  <a
-                    href="#"
-                    className="text-sm font-medium leading-none text-white underline hover:no-underline dark:text-white"
-                  >
-                    345 Reviews
-                  </a>
-                </div>
-              </div>
-
-              <div className="mt-6 sm:gap-4 sm:items-center sm:flex sm:mt-8">
-                <a
-                  href="#"
-                  title=""
-                  className="text-white mt-4 sm:mt-0 bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800 flex items-center justify-center"
-                  role="button"
-                >
-                  <svg
-                    className="w-5 h-5 -ms-2 me-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6"
-                    />
-                  </svg>
-                  Order Now
-                </a>
-              </div>
-
-              <hr className="my-6 md:my-8 border-gray-200 dark:border-gray-800" />
-
-              <p className="mb-6 text-white dark:text-gray-400">
-                {product.description}
-              </p>
-
-              <p className="text-white dark:text-gray-400">
-                Two Thunderbolt USB 4 ports and up to two USB 3 ports. Ultrafast
-                Wi-Fi 6 and Bluetooth 5.0 wireless. Color matched Magic Mouse
-                with Magic Keyboard or Magic Keyboard with Touch ID.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="w-full px-4 flex justify-center">
+    <div className="w-full max-w-4xl rounded-2xl p-6 md:p-10 shadow-lg  text-start">
+      
+      {/* Section Tagline */}
+      <h2 className="text-xs md:text-sm font-mono tracking-wider text-white/50 uppercase">
+        PRE_BUILT_HARDWARE
+      </h2>
+  
+      {/* Product Name */}
+      <h1 className="mt-2 text-2xl md:text-4xl font-mono font-semibold text-white">
+        {product.name}
+      </h1>
+  
+      {/* Product Image */}
+      <div className="w-full mt-6">
+        <img
+          src={product.imageSrc}
+          alt={product.name}
+          className="w-full h-auto max-h-[500px] rounded-xl object-cover shadow-md mx-auto"
+        />
+      </div>
+  
+      {/* Name and Price */}
+      <div className="mt-6 flex flex-col items-start gap-2">
+        <h2 className="text-xl md:text-2xl font-mono font-semibold text-white">
+          {product.name}
+        </h2>
+        <p className="text-white/60 text-sm font-mono">{product.price}</p>
+      </div>
+  
+      {/* Product Description */}
+      <div className="mt-4 border border-white/10 p-4 rounded-md font-mono text-sm text-white/80 bg-background/40 text-start">
+        <p>{product.description}</p>
+      </div>
     </div>
+  </section>
+  
+    // <div className="min-h-screen w-full flex items-center justify-center py-16 px-4">
+    //   <section className="w-full max-w-7xl rounded-2xl p-8 shadow-lg">
+    //     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    //       {/* Product Image */}
+    //       <div className="w-full">
+    //         <img
+    //           src={product.imageSrc}
+    //           alt={product.name}
+    //           className="w-full rounded-xl object-cover shadow-md"
+    //         />
+    //       </div>
+
+    //       {/* Product Info */}
+    //       <div className="w-full">
+    //         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    //           {product.name}
+    //         </h1>
+
+    //         <p className="text-white/80 text-base md:text-lg mb-6">
+    //           {product.description}
+    //         </p>
+
+    //         <p className="text-indigo-400 text-2xl font-semibold mb-4">
+    //           ₹{product.price}
+    //         </p>
+
+    //         {/* Rating and Reviews */}
+    //         <div className="flex items-center mb-6">
+    //           <div className="flex space-x-1">
+    //             {[...Array(5)].map((_, idx) => (
+    //               <svg
+    //                 key={idx}
+    //                 className="w-5 h-5 text-yellow-400"
+    //                 fill="currentColor"
+    //                 viewBox="0 0 24 24"
+    //               >
+    //                 <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.783 1.4 8.174L12 18.896l-7.334 3.87 1.4-8.174L.132 9.21l8.2-1.192L12 .587z" />
+    //               </svg>
+    //             ))}
+    //           </div>
+    //           <p className="text-sm text-white/60 ml-2">(5.0)</p>
+    //           <a
+    //             href="#"
+    //             className="ml-3 text-sm text-indigo-400 underline hover:text-indigo-300"
+    //           >
+    //             345 Reviews
+    //           </a>
+    //         </div>
+
+    //         {/* Order Button */}
+    //         <a
+    //           href="#"
+    //           className="inline-flex items-center justify-center px-6 py-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md font-semibold transition-all duration-200"
+    //         >
+    //           <svg
+    //             className="w-5 h-5 mr-2"
+    //             fill="none"
+    //             stroke="currentColor"
+    //             strokeWidth="2"
+    //             viewBox="0 0 24 24"
+    //           >
+    //             <path d="M3 3h2l.4 2M7 13h10l1.3-6H6.4M7 13l-1.2 6M7 13h10m-1 6a2 2 0 100-4 2 2 0 000 4zm-8 0a2 2 0 100-4 2 2 0 000 4z" />
+    //           </svg>
+    //           Order Now
+    //         </a>
+
+    //         {/* Extra Info */}
+    //         <hr className="my-8 border-gray-700" />
+
+    //         <ul className="text-sm text-white/70 space-y-2">
+    //           <li>✓ Up to two Thunderbolt USB 4 ports</li>
+    //           <li>✓ Ultrafast Wi-Fi 6 and Bluetooth 5.0</li>
+    //           <li>✓ Comes with Magic Mouse and Keyboard</li>
+    //           <li>✓ Sleek & Efficient design</li>
+    //         </ul>
+    //       </div>
+    //     </div>
+    //   </section>
+    // </div>
   );
 }

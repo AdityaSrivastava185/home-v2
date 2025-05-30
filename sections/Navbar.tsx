@@ -40,7 +40,7 @@ const Navbar = () => {
               ))}
             </nav>
           </div>
-          <div className="flex justify-end gap-4">
+          <div className="flex justify-end gap-4" onClick={() => router.push("/products")}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

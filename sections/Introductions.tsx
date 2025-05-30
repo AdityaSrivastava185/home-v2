@@ -23,7 +23,7 @@ const Introductions = () => {
   }, [wordIndex]);
 
   return (
-    <section className="py-18 lg:py-24 md:mt-36 md:px-24 px-10 ">
+    <section className="py-18 lg:py-24 md:px-24 px-10 ">
       <div className="container">
         <div className="sticky md:top-28 top-20">
           <div className="flex justify-center items-center">
@@ -32,7 +32,7 @@ const Introductions = () => {
               &#10038; Introducing EZEBUDDIES
             </div>
           </div>
-          <div className="text-2xl text-center font-medium mt-10 md:text-6xl font-serif">
+          <div className="text-2xl md:text-center font-medium mt-10 md:text-5xl font-mono">
             <span>
               Your Organization need better and customized devices to work {" "}
             </span>
@@ -41,7 +41,7 @@ const Introductions = () => {
                 <span
                   key={wordIndex}
                   className={
-                    wordIndex < currentWord ? "transition duration-500 text-white font-serif" : ""
+                    wordIndex < currentWord ? "transition duration-500 text-white font-mono font-medium" : ""
                   }
                 >{`${word} `}</span>
               ))}
