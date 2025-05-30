@@ -30,8 +30,8 @@ const faqs = [
 
 const Faqs = () => {
   return (
-    <section className="py-24 px-10 md:px-0">
-      <div className="container">
+    <section className="py-24 px-10 md:px-0 mx-auto w-full">
+      <div className="container mx-auto">
         <div className="flex justify-center items-center">
           <div className="inline-flex border border-indigo-500 gap-2 text-indigo-500 px-3 py-1 rounded-full uppercase items-center text-sm ">
             {" "}

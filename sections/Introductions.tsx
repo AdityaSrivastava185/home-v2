@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform } from "framer-motion";
 
-const text = `lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. `;
+const text = `At EzeBuddies, we specialize in building customized and pre-built IoT devices designed to simplify everyday operations. Whether you're a startup or an enterprise, our solutions are crafted to help organizations save time, cut costs, and operate more efficiently. From smart monitoring systems to automation-ready hardware, we ensure technology works for you, not the other way around. `;
 
 const words = text.split(" ");
 
@@ -34,7 +34,7 @@ const Introductions = () => {
           </div>
           <div className="text-2xl text-center font-medium mt-10 md:text-6xl font-serif">
             <span>
-              Your Organinizarion need btter and customized devices to work
+              Your Organization need better and customized devices to work {" "}
             </span>
             <span className="text-white/15">
               {words.map((word, wordIndex) => (
