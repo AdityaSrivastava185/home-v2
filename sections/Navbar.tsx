@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -12,7 +13,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [open , setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
   return (
     <section className="py-4 lg:py-8 sticky top-0 z-50 px-10 md:px-0">
       <div className="container max-w-5xl mx-auto">
@@ -25,12 +27,16 @@ const Navbar = () => {
               height={10}
               className="h-9 w-auto md:h-auto "
             /> */}
-            <h1 className=" text-xl md:text-2xl font-medium text-white">EZEBUDDIES</h1>
+            <h1 className=" text-xl md:text-2xl font-medium text-white">
+              EZEBUDDIES
+            </h1>
           </div>
           <div className="hidden lg:flex items-center justify-center">
             <nav className="flex gap-6 font-medium text-white ">
               {navLinks.map((link) => (
-                <Link key={link.label} href={link.href}>{link.label}</Link>
+                <Link key={link.label} href={link.href}>
+                  {link.label}
+                </Link>
               ))}
             </nav>
           </div>
@@ -45,11 +51,11 @@ const Navbar = () => {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="lucide lucide-align-justify-icon lucide-align-justify md:hidden"
+              className="lucide lucide-shopping-bag-icon lucide-shopping-bag md:hidden"
             >
-              <path d="M3 12h18" />
-              <path d="M3 18h18" />
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
               <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
             <Button className="hidden md:inline-flex items-center border h-12 rounded-full px-6 font-medium border-white text-white bg-transparent">
               Login

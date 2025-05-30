@@ -32,7 +32,7 @@ const Introductions = () => {
               &#10038; Introducing EZEBUDDIES
             </div>
           </div>
-          <div className="text-2xl text-center font-medium mt-10 md:text-6xl">
+          <div className="text-2xl text-center font-medium mt-10 md:text-6xl font-serif">
             <span>
               Your Organinizarion need btter and customized devices to work
             </span>
@@ -41,7 +41,7 @@ const Introductions = () => {
                 <span
                   key={wordIndex}
                   className={
-                    wordIndex < currentWord ? "transition duration-500 text-white" : ""
+                    wordIndex < currentWord ? "transition duration-500 text-white font-serif" : ""
                   }
                 >{`${word} `}</span>
               ))}

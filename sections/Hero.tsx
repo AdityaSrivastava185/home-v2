@@ -4,9 +4,11 @@ import { Input } from "@/components/ui/input";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimate } from "framer-motion";
-import cursorYou from "@/assets/cursor-you.svg"
+import cursorYou from "@/assets/cursor-you.svg";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   const [leftDesignScope, leftDesignAnimate] = useAnimate();
   const [rightDesignScope, rightDesignAnimate] = useAnimate();
   useEffect(() => {
@@ -23,65 +25,68 @@ const Hero = () => {
     rightDesignScope,
   ]);
   return (
-    <section className=" pt-19 pb-24 px-4 md:px-0 overflow-x-clip" style={{
-      cursor:`url(${cursorYou.src}) , auto`
-    }}>
-      <div className="container relative">
+    <section
+      className="pt-20 pb-24 px-4 md:px-8 lg:px-12 overflow-x-clip"
+      style={{ cursor: `url(${cursorYou.src}), auto` }}
+    >
+      <div className="relative max-w-screen-xl mx-auto">
         <motion.div
           ref={leftDesignScope}
-          initial={{ opacity: 0, y: 100 , x:-100 }}
-          animate={{ opacity: 1, y: 0 , x:0 }}
+          initial={{ opacity: 0, y: 100, x: -100 }}
+          animate={{ opacity: 1, y: 0, x: 0 }}
           transition={{ duration: 1 }}
-          className="absolute -left-32 top-10 hidden lg:block"
+          className="absolute -left-36 top-10 hidden xl:block"
         >
           <img
             src="https://plus.unsplash.com/premium_photo-1674624682288-085eff4f98da?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="logo"
+            alt="left visual"
+            width={320}
+            height={320}
+            className="rounded-3xl"
+          />
+        </motion.div>
+
+        <motion.div
+          ref={rightDesignScope}
+          initial={{ opacity: 0, y: 100, x: 100 }}
+          animate={{ opacity: 1, y: 0, x: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute -right-36 -top-16 hidden xl:block"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1657924170499-3dceeecdbdec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGFncmljdWx0dXJlJTIwaW90fGVufDB8fDB8fHww"
+            alt="right visual"
             width={400}
             height={400}
             className="rounded-3xl"
           />
         </motion.div>
-        <motion.div
-          ref={rightDesignScope}
-          initial={{ opacity: 0, y: 100 , x:100 }}
-          animate={{ opacity: 1, y: 0 , x:0 }}
-          transition={{ duration: 1 }}
-          className="absolute -right-64 -top-16 hidden lg:block "
-        >
-          <img
-            src="https://images.unsplash.com/photo-1657924170499-3dceeecdbdec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGFncmljdWx0dXJlJTIwaW90fGVufDB8fDB8fHww"
-            alt="logo"
-            width={500}
-            height={500}
-            className="rounded-3xl"
-          />
-        </motion.div>
+
         <div className="flex justify-center">
           <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 text-neutral-950 font-semibold rounded-full">
             ✨7.4M seed round raised
           </div>
         </div>
-        <h1 className="text-6xl font-medium lg:text-8xl text-center mt-6 md:text-7xl mx-auto">
+
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-center mt-6 mx-auto max-w-4xl z-10 relative">
           Impactful Devices <br /> Created Effortlessly
         </h1>
-        <p className="text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto">
+
+        <p className="text-center text-lg md:text-xl text-white/50 mt-6 max-w-2xl mx-auto z-10 relative">
           You can design and manufacture devices with ease, without the need for
-          complex engineering knowledge with our ai powered platform.
+          complex engineering knowledge with our AI-powered platform.
         </p>
-        <form
-          action=""
-          className="flex border border-white/15 rounded-full p-2 mt-8 justify-between max-w-lg mx-auto gap-2 items-center"
-        >
-          <Input
-            className="rounded-full bg-transparent px-4 felx-1"
-            type="email"
-            placeholder="Enter your email"
-          />
-          <Button className="border rounded-full px-6 font-medium bg-indigo-500 text-white border-indigo-500 whitespace-nowrap h-10">
-            Get Started
-          </Button>
-        </form>
+
+        <div className="flex justify-center mt-8 z-10 relative px-4">
+  <button
+    type="button"
+    onClick={() => router.push('/products')}
+    className="w-full sm:w-auto text-white bg-gradient-to-r from-indigo-600 via-indigo-600 to-indigo-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-2xl text-base sm:text-sm text-center me-2 whitespace-nowrap px-6 sm:px-10 py-3 cursor-pointer"
+  >
+    Explore Products
+  </button>
+</div>
+
       </div>
     </section>
   );
