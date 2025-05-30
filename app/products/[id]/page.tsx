@@ -24,7 +24,7 @@ export default function ProductDetailPage({ params }: Props) {
       </h2>
   
       {/* Product Name */}
-      <h1 className="mt-2 text-2xl md:text-4xl font-mono font-semibold text-white">
+      <h1 className="mt-2 text-lg md:text-2xl font-mono font-semibold text-white">
         {product.name}
       </h1>
   
