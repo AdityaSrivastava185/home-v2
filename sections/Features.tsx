@@ -18,14 +18,14 @@ const Features = () => {
     <section className="py-18 px-10 md:px-24">
       <div className="container">
         <div className="flex justify-center items-center">
-          <div className="inline-flex border border-lime-400 gap-2 text-lime-400 px-3 py-1 rounded-full uppercase items-center text-sm ">
+          <div className="inline-flex border border-indigo-500 gap-2 text-indigo-500 px-3 py-1 rounded-full uppercase items-center text-sm ">
             {" "}
             &#10038; Features
           </div>
         </div>
         <h2 className=" text-4xl md:text-6xl font-medium  text-center mt-6 max-w-2xl mx-auto">
           Place where power meets{" "}
-          <span className="text-lime-400">simplicity</span>
+          <span className="text-indigo-500">simplicity</span>
         </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8 ">
           <FeatureCard

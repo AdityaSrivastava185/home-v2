@@ -43,7 +43,7 @@ const Integrations = () => {
         <div className="grid lg:grid-cols-2 items-center lg:gap-16 ">
           <div>
             <div className="flex justify-center items-center">
-              <div className="inline-flex border border-lime-400 gap-2 text-lime-400 px-3 py-1 rounded-full uppercase items-center text-sm ">
+              <div className="inline-flex border border-indigo-500 gap-2 text-indigo-500 px-3 py-1 rounded-full uppercase items-center text-sm ">
                 {" "}
                 &#10038; Integrations
               </div>
@@ -51,7 +51,7 @@ const Integrations = () => {
           </div>
           <div>
             <h2 className=" text-4xl md:text-6xl font-medium mt-6">
-              Place well with <span className="text-lime-400">others</span>
+              Place well with <span className="text-indigo-500">others</span>
             </h2>
             <p className="text-white/50 mt-4 text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit

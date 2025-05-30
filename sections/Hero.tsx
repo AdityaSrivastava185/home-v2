@@ -34,11 +34,12 @@ const Hero = () => {
           transition={{ duration: 1 }}
           className="absolute -left-32 top-10 hidden lg:block"
         >
-          <Image
-            src="/design-example-1.png"
+          <img
+            src="https://plus.unsplash.com/premium_photo-1674624682288-085eff4f98da?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="logo"
             width={400}
             height={400}
+            className="rounded-3xl"
           />
         </motion.div>
         <motion.div
@@ -46,18 +47,19 @@ const Hero = () => {
           initial={{ opacity: 0, y: 100 , x:100 }}
           animate={{ opacity: 1, y: 0 , x:0 }}
           transition={{ duration: 1 }}
-          className="absolute -right-64 -top-16 hidden lg:block"
+          className="absolute -right-64 -top-16 hidden lg:block "
         >
-          <Image
-            src="/design-example-2.png"
+          <img
+            src="https://images.unsplash.com/photo-1657924170499-3dceeecdbdec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGFncmljdWx0dXJlJTIwaW90fGVufDB8fDB8fHww"
             alt="logo"
             width={500}
             height={500}
+            className="rounded-3xl"
           />
         </motion.div>
         <div className="flex justify-center">
-          <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-400 text-neutral-950 font-semibold rounded-full">
-            7.4M seed round raised
+          <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 text-neutral-950 font-semibold rounded-full">
+            ✨7.4M seed round raised
           </div>
         </div>
         <h1 className="text-6xl font-medium lg:text-8xl text-center mt-6 md:text-7xl mx-auto">
@@ -76,7 +78,7 @@ const Hero = () => {
             type="email"
             placeholder="Enter your email"
           />
-          <Button className="border rounded-full px-6 font-medium bg-lime-400 text-zinc-800 border-lime-400 whitespace-nowrap h-10">
+          <Button className="border rounded-full px-6 font-medium bg-indigo-500 text-white border-indigo-500 whitespace-nowrap h-10">
             Get Started
           </Button>
         </form>

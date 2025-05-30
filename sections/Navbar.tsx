@@ -54,7 +54,7 @@ const Navbar = () => {
             <Button className="hidden md:inline-flex items-center border h-12 rounded-full px-6 font-medium border-white text-white bg-transparent">
               Login
             </Button>
-            <Button className="hidden md:inline-flex items-center border h-12 rounded-full px-6 font-medium bg-lime-400 text-zinc-800 border-lime-400">
+            <Button className="hidden md:inline-flex items-center border h-12 rounded-full px-6 font-medium bg-indigo-500 text-white border-indigo-500">
               Sign Up
             </Button>
           </div>
