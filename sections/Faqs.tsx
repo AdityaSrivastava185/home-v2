@@ -38,7 +38,7 @@ const Faqs = () => {
             &#10038; Features
           </div>
         </div>
-        <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
+        <h2 className="text-4xl md:text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
           Frequently Asked <span className="text-lime-400">Questions</span>
         </h2>
         <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">

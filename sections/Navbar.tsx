@@ -14,7 +14,7 @@ const navLinks = [
 const Navbar = () => {
   const [open , setOpen] = useState(false)
   return (
-    <section className="py-4 lg:py-8 sticky top-0 z-50 ">
+    <section className="py-4 lg:py-8 sticky top-0 z-50 px-10 md:px-0">
       <div className="container max-w-5xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-3 border border-white/15 rounded-full p-2 items-center px-4 md:pr-2 mx-auto bg-neutral-950/70 backdrop-blur-lg ">
           <div>
@@ -25,6 +25,7 @@ const Navbar = () => {
               height={10}
               className="h-9 w-auto md:h-auto "
             /> */}
+            <h1 className=" text-xl md:text-2xl font-medium text-white">EZEBUDDIES</h1>
           </div>
           <div className="hidden lg:flex items-center justify-center">
             <nav className="flex gap-6 font-medium text-white ">

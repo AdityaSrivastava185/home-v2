@@ -23,7 +23,7 @@ const Introductions = () => {
   }, [wordIndex]);
 
   return (
-    <section className="py-18 lg:py-24 md:px-24 px-10">
+    <section className="py-18 lg:py-24 md:px-24 px-10 ">
       <div className="container">
         <div className="sticky top-28">
           <div className="flex justify-center items-center">

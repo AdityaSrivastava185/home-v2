@@ -50,7 +50,7 @@ const Integrations = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-6xl font-medium mt-6">
+            <h2 className=" text-4xl md:text-6xl font-medium mt-6">
               Place well with <span className="text-lime-400">others</span>
             </h2>
             <p className="text-white/50 mt-4 text-lg">

@@ -69,9 +69,9 @@ const Hero = () => {
         </p>
         <form
           action=""
-          className="flex border border-white/15 rounded-full p-2 mt-8 justify-between max-w-lg mx-auto"
+          className="flex border border-white/15 rounded-full p-2 mt-8 justify-between max-w-lg mx-auto gap-2 items-center"
         >
-          <input
+          <Input
             className="rounded-full bg-transparent px-4 felx-1"
             type="email"
             placeholder="Enter your email"

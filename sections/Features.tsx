@@ -23,7 +23,7 @@ const Features = () => {
             &#10038; Features
           </div>
         </div>
-        <h2 className="text-6xl font-medium  text-center mt-6 max-w-2xl mx-auto">
+        <h2 className=" text-4xl md:text-6xl font-medium  text-center mt-6 max-w-2xl mx-auto">
           Place where power meets{" "}
           <span className="text-lime-400">simplicity</span>
         </h2>
