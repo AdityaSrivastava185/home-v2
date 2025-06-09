@@ -57,7 +57,7 @@ const Navbar = () => {
               <path d="M3 6h18" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
-            <Button onClick={() => router.push("/products")} className="hidden md:inline-flex items-center border h-12 rounded-full px-6 font-medium bg-indigo-500 text-white border-indigo-500 cursor-pointer">
+            <Button className="hidden md:inline-flex items-center border h-12 rounded-full px-6 font-medium bg-indigo-500 text-white border-indigo-500 cursor-pointer">
               Explore Products
             </Button>
           </div>

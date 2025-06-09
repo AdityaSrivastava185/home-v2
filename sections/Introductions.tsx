@@ -32,7 +32,7 @@ const Introductions = () => {
               &#10038; Introducing EZEBUDDIES
             </div>
           </div>
-          <div className="text-2xl md:text-center font-medium mt-10 md:text-5xl font-mono">
+          <div className="text-2xl md:text-center font-medium mt-10 md:text-[40px] font-sans">
             <span>
               Your Organization need better and customized devices to work {" "}
             </span>
@@ -41,12 +41,12 @@ const Introductions = () => {
                 <span
                   key={wordIndex}
                   className={
-                    wordIndex < currentWord ? "transition duration-500 text-white font-mono font-medium" : ""
+                    wordIndex < currentWord ? "transition duration-500 text-indigo-500 font-sans text-white" : ""
                   }
                 >{`${word} `}</span>
               ))}
             </span>
-            <span className="text-indigo-500 block">
+            <span className="text-white block">
               That&apos;s why we created EZEBUDDIES
             </span>
           </div>
