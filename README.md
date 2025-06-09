@@ -12,7 +12,7 @@ Welcome to **EzeBuddies** – a modern, responsive landing page built with **Nex
 
 ### 🔥 Live Demo
 
-> [Coming Soon / Add your Vercel or Netlify link here]
+> [View the Live Demo](https://home-v2-two.vercel.app/)
 
 ---
 
